@@ -5,7 +5,7 @@ import BasicModal from '../ui/components/Admin/Modal/Modal';
 
 export default async function Admin() {
 
-  const res = await fetch("http://localhost:3001/api/categories", {
+  const res = await fetch(`${process.env.URL}/api/categories`, {
     cache: 'no-store',
     next: {
       tags: ['categories']

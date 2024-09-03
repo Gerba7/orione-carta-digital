@@ -1,6 +1,8 @@
 'use server'
 
 import { revalidateTag } from "next/cache";
+import { connectDB } from "./mongodb";
+import Category from './mongoose/categoryModel';
 
 
 
@@ -8,7 +10,7 @@ export async function createProduct(categoryId) {
 
     try {
 
-        const res = await fetch(`http://localhost:3001/api/products/new`, {
+        const res = await fetch(`${process.env.URL}/api/products/new`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json', 
@@ -34,7 +36,7 @@ export async function updateProduct(product) {
     
     try {
 
-        const res = await fetch(`http://localhost:3001/api/products`, {
+        const res = await fetch(`${process.env.URL}/api/products`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json', 
@@ -63,7 +65,7 @@ export async function deleteProduct(productId) {
     
     try {
 
-        const res = await fetch(`http://localhost:3001/api/products/${productId}`, {
+        const res = await fetch(`${process.env.URL}/api/products/${productId}`, {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json', 
@@ -85,7 +87,7 @@ export async function updateActiveProduct(product) {
         
         try {
     
-            const res = await fetch(`http://localhost:3001/api/products/active`, {
+            const res = await fetch(`${process.env.URL}/api/products/active`, {
                 method: 'PUT',
                 headers: {
                   'Content-Type': 'application/json', 
@@ -116,7 +118,7 @@ export async function createCategory(formData) {
     
     try {
 
-        const res = await fetch(`http://localhost:3001/api/categories/new`, {
+        const res = await fetch(`${process.env.URL}/api/categories/new`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json', 
@@ -129,6 +131,27 @@ export async function createCategory(formData) {
     } catch(err) {
 
         console.log(err)
+
+    }
+
+}
+
+
+export async function getCategories() {
+
+    await connectDB()
+    
+    try {
+
+        const categories = await Category.find().populate('products');
+
+        const response = { categories };
+        
+        return response
+
+    } catch(err) {
+
+        return console.log(err)
 
     }
 

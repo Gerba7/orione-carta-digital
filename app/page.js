@@ -14,7 +14,7 @@ import Top from "./ui/components/Top/Top";
 
 export default async function Home() {
 
-  const res = await fetch("http://localhost:3001/api/categories", {
+  const res = await fetch(`${process.env.URL}/api/categories`, {
     cache: 'no-store',
     next: {
       tags: ['categories']
