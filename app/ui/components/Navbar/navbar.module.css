@@ -1,0 +1,32 @@
+.container {
+    height: 7vh;
+    overflow-x: scroll;
+    white-space: nowrap;
+    border-top: 2px solid var(--text);
+    border-bottom: 2px solid var(--text);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    -ms-overflow-style: none; /* For IE/Edge */
+    scrollbar-width: none; /* For Firefox */
+    background-color: var(--bg);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.link {
+    font-size: var(--name);
+    font-weight: 700;
+}
