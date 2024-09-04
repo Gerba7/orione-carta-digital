@@ -1,25 +1,32 @@
 .container {
     height: 7vh;
+    display: flex;
+    align-items: center;
     overflow-x: scroll;
     white-space: nowrap;
     border-top: 2px solid var(--text);
     border-bottom: 2px solid var(--text);
+    background-color: var(--bg);
+    z-index: 50;
+}
+
+.innerContainer {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 2vh;
     padding-left: 2vh;
     padding-right: 2vh;
+    white-space: nowrap;
+    overflow-x: auto; /* Enables horizontal scrolling */
     -ms-overflow-style: none; /* For IE/Edge */
     scrollbar-width: none; /* For Firefox */
-    background-color: var(--bg);
 }
 
 .sticky {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 50;
+    right: 0;
 }
 
 .container::-webkit-scrollbar {

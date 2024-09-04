@@ -101,3 +101,36 @@
     color: var(--bg);
     font-weight: 700;
 }
+
+
+@media  (max-width: 799px) {
+
+    .productsContainer {
+        padding: 2vh;
+    }
+
+    .iconContainer {
+        font-size: 6vw;
+    }
+
+    .input {
+        width: 40vw;
+    }
+    
+    .textarea {
+        height: 10vh;
+    }
+
+    .inputPrice {
+        width: 40vw;
+    }
+
+    .button {
+        width: 40vw;
+    }
+    
+    .disabledButton {
+        width: 40vw;
+    }
+
+}

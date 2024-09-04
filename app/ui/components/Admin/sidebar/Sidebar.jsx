@@ -1,8 +1,8 @@
 import MenuLink from './menuLink/MenuLink';
 import styles from './sidebar.module.css';
 import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
-import LogoutIcon from '@mui/icons-material/Logout';
 import Link from 'next/link';
+import LogoutButton from './LogoutButton/LogoutButton';
 
 
 
@@ -30,10 +30,7 @@ const Sidebar = () => {
         ))}
       </ul>
       <div className={styles.logoutContainer}>
-        <button className={styles.logout}>
-          <LogoutIcon />
-          Logout
-        </button>
+        <LogoutButton />
       </div>
     </div>
   )

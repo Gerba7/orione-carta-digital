@@ -17,3 +17,18 @@
     padding: 24px;
     gap: 24px;
 }
+
+
+
+@media  (max-width: 799px) {
+
+    .menu {
+        display: none;
+    }
+
+    .content {
+        padding: 0;
+        gap: 24px;
+    }
+
+}

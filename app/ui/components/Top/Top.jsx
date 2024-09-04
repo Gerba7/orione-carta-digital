@@ -5,6 +5,8 @@ import Cover from '../../../../public/images/orioneCover.jpg';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Link from 'next/link';
 
 
 
@@ -27,6 +29,10 @@ const Top = () => {
             </div>
         </div>
         <h2 className={styles.bottomTitle}>RESERVAS | 4725 3838</h2>
+        <Link className={styles.bottomTitle} href="#Cafetería">Ver Menú</Link>
+        <Link className={styles.link} href="#Cafetería" aria-label='linkArrow'>
+            <ExpandMoreIcon color="inherit" style={{fontSize: 'inherit'}} />
+        </Link>
     </div>
   )
 }

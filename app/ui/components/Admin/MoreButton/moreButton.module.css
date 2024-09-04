@@ -21,3 +21,16 @@
 .button:hover {
     background-color: var(--brand);
 }
+
+
+@media  (max-width: 799px) {
+
+    .addProductContainer {
+        padding: 3vh;
+    }
+
+    .button {
+        width: 40vw;
+    }
+
+}

@@ -67,3 +67,17 @@
     color: var(--bgGray);
     font-weight: 400;
 }
+
+
+
+
+@media  (max-width: 799px) {
+
+    .container {
+        padding: 0;
+        border-radius: 0;
+        height: 10vh;
+        padding: var(--padding);
+    }
+
+}

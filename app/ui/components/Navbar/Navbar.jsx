@@ -29,15 +29,16 @@ const Navbar = ({ categories }) => {
   }, []);
 
   return (
-    <div className={`${styles.container} 
- ${sticky && styles.sticky}`} ref={componentRef}>
-      {categories?.map((category) => {
-        return (
-          <Link key={category?._id} href={`#${category?.name}`} className={styles.link}>
-            {category?.name}
-          </Link>
-        );
-      })}
+    <div className={`${styles.container} ${sticky && styles.sticky}`} ref={componentRef}>
+      <div className={styles.innerContainer}>
+        {categories?.map((category) => {
+          return (
+            <Link key={category?._id} href={`#${category?.name}`} className={styles.link}>
+              {category?.name}
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };

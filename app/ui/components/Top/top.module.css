@@ -3,7 +3,7 @@
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: column;
     padding: 15vh 0;
     gap: 3vh;
@@ -16,7 +16,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 40%;
+    height: 30%;
     background-color: red;
 }
 
@@ -28,6 +28,7 @@
 }
 
 .img {
+    margin-top: 25%;
     width: 35vw;
     height: auto;
 }
@@ -44,4 +45,29 @@
 
 .bottomTitle {
     font-size: var(--name);
+    font-weight: 700;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY( 0);
+    }
+    40% {
+      transform: translateY( -20px);
+    }
+    60% {
+      transform: translateY( -10px);
+    }
+}
+
+.link {
+    display: flex;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 70px;
+    bottom: 10vh;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+    animation: bounce 2s infinite;
 }

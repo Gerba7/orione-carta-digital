@@ -9,11 +9,12 @@ const Section = ({category}) => {
 
 
   return (
-    <div id={`${category?.name}`} className={`${styles.container} 
+    <div className={`${styles.container} 
         ${category.name === 'Principales' ? styles.mains : ''}
         ${category.name === 'Tragos' ? styles.drinks : ''}
         ${category.name === 'Ensaladas' ? styles.salads : ''}
     `}>
+        <div className={styles.scrollOffset}  id={`${category?.name}`} />
         <h2 className={styles.mainTitle}>{category?.name}</h2>
         <div className={`${styles.products}`}>
             {products?.map((product) => {

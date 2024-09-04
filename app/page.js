@@ -1,13 +1,6 @@
 import styles from "./page.module.css";
-import Alcohol from "./ui/components/Alcohol/Alcohol";
-import Coffee from "./ui/components/Coffee/Coffee";
-import Desserts from "./ui/components/Desserts/Desserts";
-import Drinks from "./ui/components/Drinks/Drinks";
 import Section from "./ui/components/Home/Section/Section";
-import Mains from "./ui/components/Mains/Mains";
 import Navbar from "./ui/components/Navbar/Navbar";
-import Salads from "./ui/components/Salads/Salads";
-import Starters from "./ui/components/Starters/Starters";
 import Top from "./ui/components/Top/Top";
 
 

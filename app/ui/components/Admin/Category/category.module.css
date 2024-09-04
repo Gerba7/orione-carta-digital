@@ -23,3 +23,20 @@
     padding: 2px;
     cursor: pointer;
 }
+
+
+@media  (max-width: 799px) {
+
+    .categoryContainer {
+        height: 7vh;
+    }
+
+    .category {
+        font-size: var(--name);
+    }
+
+    .icon {
+        font-size: 6vw;
+    }
+
+}
