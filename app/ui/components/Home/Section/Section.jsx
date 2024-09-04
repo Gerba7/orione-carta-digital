@@ -9,7 +9,7 @@ const Section = ({category}) => {
 
 
   return (
-    <div className={`${styles.container} 
+    <div className={`${styles.section} 
         ${category.name === 'Principales' ? styles.mains : ''}
         ${category.name === 'Tragos' ? styles.drinks : ''}
         ${category.name === 'Ensaladas' ? styles.salads : ''}

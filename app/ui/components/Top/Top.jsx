@@ -18,15 +18,15 @@ const Top = () => {
         </div>
         <Image className={styles.img} src={Logo} alt='logo' priority />
         <div className={styles.socialContainer}>
-            <div className={styles.socialLink}>
+            <a href='https://www.facebook.com/orionebar' className={styles.socialLink}>
                 <FacebookIcon fontSize='inherit' color='inherit' />
-            </div>
-            <div className={styles.socialLink}>
+            </a>
+            <a href='https://www.instagram.com/orione.bar' className={styles.socialLink}>
                 <InstagramIcon fontSize='inherit' color='inherit' />
-            </div>
-            <div className={styles.socialLink}>
+            </a>
+            <a href='https://api.whatsapp.com/send?phone=5491126407905' className={styles.socialLink}>
                 <WhatsAppIcon fontSize='inherit' color='inherit' />
-            </div>
+            </a>
         </div>
         <h2 className={styles.bottomTitle}>RESERVAS | 4725 3838</h2>
         <Link className={styles.bottomTitle} href="#Cafetería">Ver Menú</Link>

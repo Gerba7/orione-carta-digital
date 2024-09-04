@@ -19,6 +19,9 @@ const Navbar = ({ categories }) => {
       } else if (window.scrollY < windowHeight) {
         setSticky(false);
       }
+
+      const currentSection = document.querySelector('.section.active');
+      console.log(currentSection)
     };
 
     window.addEventListener('scroll', handleScroll);
